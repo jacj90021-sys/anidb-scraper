@@ -2,6 +2,15 @@
 
 A clean, **captcha-free** anime streaming scraper for [anidb.app](https://anidb.app).
 
+> **📚 Scraping method playbook:** this repo also documents the general A→Z
+> techniques for scraping anime streams. See [`docs/`](docs/):
+> - [`docs/METHODS.md`](docs/METHODS.md) — 8 site-agnostic methods (M1–M8)
+> - [`docs/sites/`](docs/sites/) — per-site writeups (anidb, anikage, just4anime, otakuhg, animegg, megaplay, vivibebe)
+> - [`docs/just4anime_PROOF.md`](docs/just4anime_PROOF.md) — live-verified proof all 6 just4anime servers work
+> - [`docs/templates/`](docs/templates/) — reusable code (node packer decoder, HLS verify, Flask API)
+> - [`docs/pitfalls.md`](docs/pitfalls.md) — the mistakes that cost the most time
+> - [`docs/methods.json`](docs/methods.json) — machine-readable index
+
 Unlike AllAnime-based scrapers, anidb.app does **not** gate its API behind a
 reCAPTCHA or Cloudflare challenge (it is reached via `curl_cffi` browser
 impersonation to pass Cloudflare's TLS check). Every episode resolves to a
